@@ -5,6 +5,11 @@ module.exports = function(app){
       target:'http://localhost:5000',
       changeOrigin: true,
       pathRewrite:{'^/api1':''}
+    }),
+    proxy('/api2',{
+      target:'http://localhost:5001',
+      changeOrigin: true,
+      pathRewrite:{'^/api2':''}
     })
   )
 }
